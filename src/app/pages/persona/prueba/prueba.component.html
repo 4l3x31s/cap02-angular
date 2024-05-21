@@ -1,0 +1,20 @@
+<p>prueba works!</p>
+<p>
+  {{titulo}}
+</p>
+<div *ngIf="muestradata">mostrando....</div>
+@if (muestradata) {
+  <div>Datos</div>
+}
+@for (item of items; track $index) {
+  <span>{{item}}</span>
+
+}
+<input type="text" [(ngModel)]="titulo" />
+<button (click)="pruebaBoton()">Mi boton</button>
+<p>{{persona.nombre}}</p>
+<div > data:
+{{ personaServicio  | async| json}}
+</div>
+<h2>Componente hijo</h2>
+<ruat-detalle-deuda [nombre]="titulo" (salida)="recibeDatos($event)" ></ruat-detalle-deuda>
